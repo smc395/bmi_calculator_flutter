@@ -1,11 +1,10 @@
+import 'package:bmi_calculator/screens/intro_page.dart';
 import 'package:flutter/material.dart';
-import 'screens/input_page.dart';
 
 void main() => runApp(BMICalculator());
 
 class BMICalculator extends StatelessWidget {
   Color darkPurpleColor = Color(0xFF0A0E21);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,7 +12,7 @@ class BMICalculator extends StatelessWidget {
         primaryColor: darkPurpleColor,
         scaffoldBackgroundColor: darkPurpleColor,
       ),
-      home: InputPage(),
+      home: IntroPage(),
     );
   }
 }

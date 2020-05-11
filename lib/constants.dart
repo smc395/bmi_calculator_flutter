@@ -49,3 +49,8 @@ const kInterpretationTextStyle = TextStyle(
   fontSize: 25.0,
   color: Colors.white,
 );
+// Intro Page
+const kIntroParagraphTextStyle = TextStyle(
+  fontSize: 24.0,
+  color: Colors.white,
+);

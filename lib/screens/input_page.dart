@@ -8,10 +8,17 @@ import '../constants.dart';
 import '../components/rounded_icon_button.dart';
 import '../components/bottom_button.dart';
 import 'package:bmi_calculator/calculator_brain.dart';
+import 'intro_page.dart';
 
 enum Gender { male, female }
 
 class InputPage extends StatefulWidget {
+  InputPage({
+    @required this.selectedUnit,
+  });
+
+  final Units selectedUnit;
+
   @override
   _InputPageState createState() => _InputPageState();
 }
@@ -116,7 +123,9 @@ class _InputPageState extends State<InputPage> {
                         style: kNumberTextStyle,
                       ),
                       Text(
-                        ' inches',
+                        widget.selectedUnit == Units.imperial
+                            ? ' inches'
+                            : ' cm',
                         style: kLabelTextStyle,
                       ),
                     ],
@@ -136,8 +145,8 @@ class _InputPageState extends State<InputPage> {
                     ),
                     child: Slider(
                       value: selectedHeight.toDouble(),
-                      min: 48.0,
-                      max: 96.0,
+                      min: 0.0,
+                      max: 250.0,
                       onChanged: (double newValue) {
                         setState(() {
                           selectedHeight = newValue.toInt();
@@ -173,7 +182,9 @@ class _InputPageState extends State<InputPage> {
                               style: kNumberTextStyle,
                             ),
                             Text(
-                              ' lbs',
+                              widget.selectedUnit == Units.imperial
+                                  ? ' lbs'
+                                  : ' kg',
                               style: kLabelTextStyle,
                             ),
                           ],
@@ -281,6 +292,7 @@ class _InputPageState extends State<InputPage> {
               CalculatorBrain brain = CalculatorBrain(
                 height: selectedHeight,
                 weight: selectedWeight,
+                unit: widget.selectedUnit,
               );
 
               Navigator.push(

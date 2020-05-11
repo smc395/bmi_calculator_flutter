@@ -1,19 +1,26 @@
 import 'dart:math';
+import 'package:bmi_calculator/screens/intro_page.dart';
 
 class CalculatorBrain {
   CalculatorBrain({
     this.height,
     this.weight,
+    this.unit,
   });
 
   final int height;
   final int weight;
+  final Units unit;
 
   double _bmi;
 
   String calculateBMI() {
     //imperial way of calculating BMI
-    _bmi = 703 * (weight / pow(height, 2));
+    if (unit == Units.imperial) {
+      _bmi = 703 * (weight / pow(height, 2));
+    } else {
+      _bmi = weight / pow((height / 100), 2);
+    }
     return _bmi.toStringAsFixed(1);
   }
 
