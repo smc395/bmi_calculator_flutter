@@ -48,7 +48,9 @@ class _IntroPageState extends State<IntroPage> {
                       padding: const EdgeInsets.all(20.0),
                       child: Text(
                         'Imperial',
-                        style: kLabelTextStyle,
+                        style: selectedUnit == Units.imperial
+                            ? kActiveLabelTextStyle
+                            : kInactiveLabelTextStyle,
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -68,7 +70,9 @@ class _IntroPageState extends State<IntroPage> {
                       padding: const EdgeInsets.all(20.0),
                       child: Text(
                         'Metric',
-                        style: kLabelTextStyle,
+                        style: selectedUnit == Units.metric
+                            ? kActiveLabelTextStyle
+                            : kInactiveLabelTextStyle,
                         textAlign: TextAlign.center,
                       ),
                     ),

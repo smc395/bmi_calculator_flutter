@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
 
 // Colors
-const Color kActiveCardColor = Color(0xFF1D1E33);
-const Color kInactiveCardColor = Color(0xFF111328);
+const Color kInactiveCardColor = Color(0xFF2C2F33);
+const Color kInactiveTextColor = Color(0xFF8D8E98);
+
+const Color kActiveCardColor = Color(0xFF99AAB5);
+const Color kActiveTextColor = Colors.black38;
+
 const Color kRoundIconButtonColor = Color(0xFF4C4F5E);
-const Color kThumbColor = Color(0xFFEB1555);
+const Color kThumbColor = Color(0xFF7289DA);
 
 // Numbers
 const kBottomButtonHeight = 80.0;
 
 // Text Styles
-const kLabelTextStyle = TextStyle(
+const kInactiveLabelTextStyle = TextStyle(
   fontSize: 18.0,
-  color: Color(0xFF8D8E98),
+  color: kInactiveTextColor,
+);
+
+const kActiveLabelTextStyle = TextStyle(
+  fontSize: 18.0,
+  color: kActiveTextColor,
 );
 
 const kNumberTextStyle = TextStyle(

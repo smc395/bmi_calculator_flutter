@@ -111,7 +111,7 @@ class _InputPageState extends State<InputPage> {
                 children: <Widget>[
                   Text(
                     'HEIGHT',
-                    style: kLabelTextStyle,
+                    style: kActiveLabelTextStyle,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -126,7 +126,7 @@ class _InputPageState extends State<InputPage> {
                         widget.selectedUnit == Units.imperial
                             ? ' inches'
                             : ' cm',
-                        style: kLabelTextStyle,
+                        style: kActiveLabelTextStyle,
                       ),
                     ],
                   ),
@@ -170,7 +170,7 @@ class _InputPageState extends State<InputPage> {
                       children: <Widget>[
                         Text(
                           'WEIGHT',
-                          style: kLabelTextStyle,
+                          style: kActiveLabelTextStyle,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -185,7 +185,7 @@ class _InputPageState extends State<InputPage> {
                               widget.selectedUnit == Units.imperial
                                   ? ' lbs'
                                   : ' kg',
-                              style: kLabelTextStyle,
+                              style: kActiveLabelTextStyle,
                             ),
                           ],
                         ),
@@ -239,7 +239,7 @@ class _InputPageState extends State<InputPage> {
                       children: <Widget>[
                         Text(
                           'AGE',
-                          style: kLabelTextStyle,
+                          style: kActiveLabelTextStyle,
                         ),
                         Text(
                           age.toString(),
